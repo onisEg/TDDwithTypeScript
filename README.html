@@ -1,0 +1,63 @@
+<span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="tdd-with-typescript-prime-number-calculator">TDD with TypeScript: Prime Number Calculator</h1>
+<p>A small TypeScript project built with Test-Driven Development (TDD). The project implements a prime number calculator, written step by step using the red, green, refactor cycle.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><code>isPrime(n)</code>: returns <code>true</code> if <code>n</code> is a prime number, otherwise <code>false</code>.</li>
+<li><code>listPrimesInRange(start, end)</code>: returns an array of all prime numbers in the given range (inclusive).</li>
+</ul>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li>TypeScript</li>
+<li>Jest</li>
+<li>ts-jest</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Node.js 18 or newer</li>
+<li>npm</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<pre><code class="language-bash">git <span class="hljs-built_in">clone</span> &lt;repository-url&gt;
+<span class="hljs-built_in">cd</span> TDDwithTypeScript
+npm install
+</code></pre>
+<h2 id="available-scripts">Available Scripts</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm test</code></td>
+<td>Runs all the tests once.</td>
+</tr>
+<tr>
+<td><code>npx jest --coverage</code></td>
+<td>Runs the tests and generates a coverage report in the <code>coverage/</code> folder.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="project-structure">Project Structure</h2>
+<p>TDDwithTypeScript/
+├── src/
+│ ├── primeCalculator.ts # isPrime and listPrimesInRange
+│ └── tests/
+│ └── tdd/
+│ └── prime.test.ts # Unit tests
+├── jest.config.js # Jest configuration
+├── tsconfig.json # TypeScript configuration
+├── package.json
+└── <a href="http://README.html">README.md</a></p>
+<h2 id="tdd-cycles">TDD Cycles</h2>
+<ol>
+<li><strong>Cycle 1</strong>: <code>isPrime</code> returns <code>false</code> for numbers less than 2.</li>
+<li><strong>Cycle 2</strong>: <code>isPrime</code> identifies non-prime numbers, using a loop up to the square root of <code>n</code>.</li>
+<li><strong>Cycle 3</strong>: <code>listPrimesInRange</code> returns the primes within a range, reusing <code>isPrime</code>.</li>
+</ol>
+<h2 id="test-coverage">Test Coverage</h2>
+<p>The latest run reports 100% coverage for statements, branches, functions, and lines in <code>primeCalculator.ts</code>.</p>
