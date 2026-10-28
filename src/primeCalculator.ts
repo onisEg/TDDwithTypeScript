@@ -6,3 +6,11 @@ export const isPrime = (n: number): boolean => {
     }
     return true;
 };
+
+export const listPrimesInRange = (start: number, end: number): number[] => {
+    const primes: number[] = [];
+    for (let n = start; n <= end; n++) {
+        if (isPrime(n)) primes.push(n);
+    }
+    return primes;
+};
